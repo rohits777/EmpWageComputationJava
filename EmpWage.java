@@ -1,22 +1,25 @@
 class EmpWage {
-  public static void main(String[] args) {
+public static final int IS_Full_Time=1,IS_Part_Time=2,wagePerHr=20;
+public static void main(String[] args) {
      System.out.println("***Welcome to employee wage computation Program***"); 
-       int fullTime = 1,partTime=2,wagePerHr=20;
         int workingHrs=0,dailyWage;
-          int random=(int)Math.floor(Math.random()*10)%2;
+        int random=(int)Math.floor(Math.random()*10)%3;
 
-     if(fullTime==random) 
+      switch(random) 
       {
-           System.out.println("Employee Is Present full time ");
-           workingHrs=8;
-       }
-     else if(random==partTime)
-       {
-           System.out.println("Employee Is present  part time .");
-                        workingHrs=4;
+        case IS_Full_Time:
+                 System.out.println("Employee Is Present full time ");
+                 workingHrs=8;
+                 break;
+        
+         case IS_Part_Time:
+                 System.out.println("Employee Is present  part time .");
+                 workingHrs=4;
+                 break; 
+
+         default:
+                System.out.println("Employee Is Absent ");
       }
-      else
-            System.out.println("Employee Is Absent ");
 
   dailyWage = wagePerHr*workingHrs; 
         System.out.println(" Daily wage of Employee is " +dailyWage);
