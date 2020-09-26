@@ -1,6 +1,6 @@
 import java.util.Scanner;
 import java.util.ArrayList;
-
+import java.util.*;
 class Company
 {
 
@@ -131,6 +131,15 @@ public class EmpWage implements EmployeeWageComp
                         empComp.calculateEmpWage(c);
 
                 }
+              System.out.println("Enter company name to get total wage");
+
+                Scanner sc = new Scanner(System.in);
+                String comName = sc.nextLine();
+
+                Integer totalG = cmpMaps.get(comName);
+                System.out.println("Total Gague fot "+comName +" is "+totalG);
+
+      }
       public void wageOnDailyBasis( int currentWorkingday, int workingHr, int totalSalary) {
                 System.out.println(workingHr + " Hrs worked on Day " + currentWorkingday + ", wage of employee is " + totalSalary);
         }
