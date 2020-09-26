@@ -131,6 +131,8 @@ public class EmpWage implements EmployeeWageComp
                         empComp.calculateEmpWage(c);
 
                 }
+      public void wageOnDailyBasis( int currentWorkingday, int workingHr, int totalSalary) {
+                System.out.println(workingHr + " Hrs worked on Day " + currentWorkingday + ", wage of employee is " + totalSalary);
+        }
 
-         }
 }
